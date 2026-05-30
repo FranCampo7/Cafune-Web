@@ -229,7 +229,7 @@ function getProductosFiltrados() {
   if (currentCat === '_busqueda') {
     data = catalogo.filter(p => p.nombre.toLowerCase().includes(searchQuery.toLowerCase()));
   } else {
-    data = catalogo.filter(p => currentCat === 'all' ? p.destacado : p.cat === currentCat);
+    data = catalogo.filter(p => currentCat === 'all' ? true : p.cat === currentCat);
     if (searchQuery.trim() !== '') {
       data = data.filter(p => p.nombre.toLowerCase().includes(searchQuery.toLowerCase()));
     }
@@ -367,7 +367,8 @@ function updateCart() {
     return;
   }
   itemsEl.innerHTML = cart.map((item, idx) => {
-    const productoData = catalogo.find(p => item.name.startsWith(p.nombre));
+    const productoData = catalogo.find(p => item.name.startsWith(p.nombre)) 
+    || combosData.find(c => item.name.startsWith(c.nombre));
     const imgSrc = productoData?.img || '';
     return `
       <div class="cart-item">
