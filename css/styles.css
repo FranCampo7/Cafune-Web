@@ -551,10 +551,13 @@ footer { background: var(--charcoal); padding: 4rem 6rem 2rem; }
   nav { padding: 1.25rem 1.5rem; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .hero { grid-template-columns: 1fr; }
-  .hero-left { padding: 7rem 2rem 3rem; min-height: 70vh; }
-  .hero-right { min-height: 50vw; }
-  .hero-scroll { left: 2rem; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 6rem 1.5rem 2.5rem; min-height: auto; }
+  .hero-left::after { display: none; }
+  .hero-right { min-height: 280px; max-height: 340px; }
+  .hero-img-grid { padding: 1rem; gap: 8px; }
+  .hero-img-card:nth-child(1) { grid-row: span 1; }
+  .hero-scroll { display: none; }
   .sobre, .contacto { grid-template-columns: 1fr; padding: 4rem 2rem; gap: 3rem; }
   .sobre-img-accent { display: none; }
   .productos, .noticias, .combos { padding: 4rem 2rem; }
