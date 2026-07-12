@@ -1,0 +1,10 @@
+{
+  "titulo": "Cafuné Cosmética Natural",
+  "descripcion": "Tienda online completa para cosmética artesanal cordobesa. Catálogo paginado con filtros, carrito lateral, checkout 3 pasos con EmailJS y sección de combos dinámicos.",
+  "categoria": "ecommerce",
+  "tags": ["E-commerce", "Tienda Online"],
+  "tecnologias": ["HTML", "CSS", "JavaScript", "EmailJS"],
+  "url": "https://cafunecosmeticanatural.com",
+  "estado": "terminado",
+  "destacado": true
+}
